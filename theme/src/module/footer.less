@@ -1,0 +1,45 @@
+/**
+* Style for the footer.
+*/
+
+/* footer */
+
+
+.outer-wrap-footer {
+    width: 100%;
+}
+
+.region-footer {
+    max-width: 900px;
+    margin: @autoMiddle;
+}
+.inner-wrap-footer {
+    background-color: @contrastBg;
+}
+
+.footer-column-wrapper {
+    overflow: auto;
+    margin: @autoMiddle;
+
+    //how come this work? Shouldnt it be impossible to set on class??
+    .footer-column:nth-child(2) {
+        border-right: @dottedBorder;
+        border-left: @dottedBorder;
+    }
+
+    .footer-column {
+        width: 33%;
+        float: left;
+        padding-left: @textLeft;
+        box-sizing: border-box;
+        border-bottom: @dottedBorder;
+    }
+}
+
+.site-footer {
+    overflow: auto;
+    text-align: center;
+    & p {
+        margin-bottom: 0.6rem;;
+    }
+}

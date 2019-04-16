@@ -1,0 +1,37 @@
+    /*!
+* LESS version of the dark theme stylesheet for design kmom04.
+*
+* This stylesheet is for the design course and kmom04.
+*/
+@import url('https://fonts.googleapis.com/css?family=Cutive+Mono|Overpass+Mono');
+@import "kmom04.less";
+
+
+@colorText: #76f601;
+@colorBorder: @colorText;
+@colorBackground: #444;
+@colorContrast: #222;
+
+@colorLinks: #00ffff;
+@colorVisited: #fff;
+@colorActive: #a52a2a;
+
+@colorAccent1: lighten(@colorText, 10%);
+@colorAccent2: darken(@colorText, 10%);
+
+@hborders: #ffa500;
+
+.rm-button-face-1 {
+    background-color: @colorBackground;
+}
+
+#design-mixin.hborderBottom(@hborders);
+
+#design-mixin.siteLogo(@colorAccent2, @colorContrast);
+
+#design-mixin.code(@colorContrast, lighten(@colorText, 10%));
+
+// Set font family to use
+@fontFamilyHeadings: "Overpass Mono", monospace;
+@fontFamilyBody: "Cutive Mono", monospace;
+@fontFamilyCode: monospace;

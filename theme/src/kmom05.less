@@ -1,0 +1,130 @@
+    /*!
+* LESS version of the stylesheet for design kmom05.
+*
+* This stylesheet is for the design course and kmom05.
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Cabin+Sketch|Fira+Sans');
+
+/**
+* clearfix
+*/
+@import "mixin/clearfix.less";
+@import "mixin/layout.less";
+/**
+* Normalize and reset the style.
+*/
+@import "normalize.css/normalize.less";
+
+/**
+* Font Awesome.
+*/
+@import "@fortawesome/fontawesome-free/less/fontawesome.less";
+@import "@fortawesome/fontawesome-free/less/solid.less";
+@import "@fortawesome/fontawesome-free/less/brands.less";
+
+/**
+ * Import the typographic grid.
+ */
+ @import "@desinax/typographic-grid/less/typography-font-families.less";
+ @import "@desinax/typographic-grid/less/typography-defaults.less";
+ @import "@desinax/typographic-grid/less/typography-sizes.less";
+ @import "@desinax/typographic-grid/less/typography-mixins.less";
+
+// Show the grid
+.hgrid .inner-wrap {
+    @gridImage: "../img/magic-number-@{magicNumber}.png";
+    #desinax-hgrid.showGrid(@gridImage);
+}
+
+/**
+ * Import the vertical grid.
+ */
+@import "@desinax/vertical-grid/less/grid.less";
+@import "layout/vgrid.less";
+
+/**
+ * Figure and figcaption for images and other media using figure/figcaption
+ */
+@import "@desinax/figure/less/asciinema.less";
+@import "@desinax/figure/less/codepen.less";
+@import "@desinax/figure/less/figure.less";
+
+
+
+/**
+* Base style to affect HTML elements on a general scale.
+*/
+
+@import "base/base4.less";
+
+
+/**
+* Layout style for general structure of header, navbar, main, footer
+* and other regions of the page including route specific styles.
+*/
+
+@import "layout/layout5.less";
+
+//@import "module/figures3.less";
+@import "module/figures5.less";
+@import "module/breadcrumb3.less";
+@import "module/stylechooser.less";
+@import "module/flashImg.less";
+@import "module/byline4.less";
+
+//set layout on responsiv
+@import "layout/responsive4.less";
+
+/**
+* A responsive menu.
+*/
+@import "@desinax/responsive-menu/less/responsive-menu.less";
+
+/**
+* My own settings, not currently in their own module.
+*/
+
+@colorText: #222;
+@colorBorder: @colorText;
+@colorBackground: #fff;
+@colorContrast: #fff;
+@hborders: yellow;
+
+@colorAccent1: lighten(@colorText, 10%);
+@colorAccent2: darken(@colorText, 10%);
+#design-mixin.siteLogo(@colorAccent2, @colorAccent1);
+
+#design-mixin.code(lighten(@colorContrast, 5%), lighten(@colorText, 10%));
+
+#design-mixin.hborderBottom(@hborders);
+
+.rm-button-face-1 {
+    background-color: @colorContrast;
+}
+
+
+.region-header {
+    font-family: @fontFamilyHeadings;
+}
+
+h1 {
+    #design-mixin.linearGradient(@colorBackground, @hborders, 90deg);
+}
+
+// Set font family to use
+@fontFamilyHeadings: "Cabin Sketch", sans-serif;
+@fontFamilyBody: "Fira Sans", sans-serif;
+@fontFamilyCode: monospace;
+
+// Magic number and base fontsize
+//found in body in base3-file
+@magicNumber:  24px;
+@fontSizeBody: 18px;
+
+
+// Default grid, change to fit your requirements.
+@columnWidth:   30;
+@gutterWidth:   10;
+@columns:       24;
+@gridType:      "float"; // "flex"

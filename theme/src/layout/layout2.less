@@ -1,0 +1,114 @@
+/**
+ * Layout style for general structure of header, navbar, main, footer
+ * and other regions of the page including route specific styles.
+ */
+
+/**
+ * Variables
+ */
+
+ @dottedBorder: 1px dotted #333;
+ @contrastBg: #b7b689;
+ @textLeft: 0.6rem;
+ @autoMiddle: 0 auto;
+ @fontSmall: 0.8em;
+ @fontMedium: 1em;
+ @fontBig: 1.2em;
+ @accentTextColor: #006600;
+
+/**
+* General layout
+*/
+
+.article {
+    #design-mixin.clearfix();
+    overflow-y: hidden;
+}
+
+.outer-wrap-flash {
+    margin: 0.6rem 0 0.6rem 0;
+}
+
+.inner-wrap {
+    max-width: 900px;
+    margin: @autoMiddle;
+
+    &.inner-wrap-footer {
+        max-width: 100%;
+    }
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+code {
+    background-color: lighten(@contrastBg, 20%);
+    border: 1px solid lighten(@contrastBg, 10%);
+    padding: 0;
+}
+
+/* sidebar n main layout */
+
+.inner-wrap-main {
+    #design-mixin.clearfix();
+}
+
+.region-main {
+    width: 100%;
+    float: left;
+    // overflow: auto;
+
+    &.has-sidebar {
+        width: 70%;
+    }
+
+    &.has-sidebar-left.has-sidebar-right {
+        width: 60%;
+    }
+}
+
+.region-sidebar-right,
+.region-sidebar-left {
+    width: 30%;
+    float: left;
+}
+
+.region-sidebar-right.has-sidebar-right,
+.region-sidebar-left.has-sidebar-left {
+    width: 20%;
+    float: left;
+}
+
+.row {
+    #design-mixin.clearfix();
+}
+
+/* for next-previous */
+
+.next-previous .next {
+    text-align: right;
+    width: 50%;
+    float: right;
+}
+
+/* breadcrumbs */
+
+.breadcrumb-list {
+    font-size: @fontMedium;
+    margin-bottom: 0.6rem;
+    margin-top: 0.6rem;
+
+    & li {
+        list-style: none;
+        display: inline-block;
+    }
+
+    & li:after {
+        content: " » "
+    }
+}

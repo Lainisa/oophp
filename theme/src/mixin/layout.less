@@ -1,0 +1,51 @@
+/**
+ * For whatever layout is needed
+ */
+
+#design-mixin {
+    .hborderBottom(@hborders) {
+        h1 {
+            border-bottom: 1px solid @hborders;
+        }
+
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            border-bottom: 1px solid lighten(@hborders, 10%);
+        }
+    }
+
+    .siteLogo(@color, @textshadow) {
+        .site-logo-text a {
+            &:link,
+            &:visited,
+            &:active {
+                text-decoration: none;
+                text-shadow: @textshadow 1px 1px 1px;
+                color: @color;
+            }
+        }
+    }
+
+    .code(@bgcolor, @bordercolor) {
+        code {
+            border: 1px solid @bordercolor;
+            background-color: @bgcolor;
+        }
+        div.code,
+        pre code {
+            border-top: @borderSizeCodeblock solid @bordercolor;
+            border-bottom: @borderSizeCodeblock solid;
+            background-color: @bgcolor;
+        }
+    }
+
+    .linearGradient(@color1, @color2, @deg) {
+        background: @color1;
+        background: -moz-linear-gradient(@deg, @color1 0%, lighten(@color1, 50%) 35%, @color2 100%);
+        background: -webkit-linear-gradient(@deg, @color1 0%, lighten(@color1, 50%), @color2 100%);
+        background: linear-gradient(@deg, @color1 0%, lighten(@color1, 50%) 35%, @color2 100%);
+    }
+}

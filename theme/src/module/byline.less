@@ -1,0 +1,21 @@
+/**
+* Style for the byline.
+*/
+
+.author-byline {
+    #design-mixin.clearfix();
+    background-color: lighten(@contrastBg, 12%);
+    width: 50%;
+    border: @dottedBorder;
+    margin-left: 0;
+    margin-bottom: 2em;
+    box-sizing: border-box;
+
+    .figure.left {
+     margin: 0 0.6rem 0 0 ;
+    }
+
+    & p {
+        font-size: @fontSmall;
+    }
+}

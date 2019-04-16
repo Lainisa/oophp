@@ -1,0 +1,111 @@
+    /*!
+* LESS version of the stylesheet for design kmom04.
+*
+* This stylesheet is for the design course and kmom04.
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Ubuntu|Catamaran');
+
+/**
+* clearfix
+*/
+@import "mixin/clearfix.less";
+@import "mixin/layout.less";
+/**
+* Normalize and reset the style.
+*/
+@import "normalize.css/normalize.less";
+
+/**
+* Font Awesome.
+*/
+@import "@fortawesome/fontawesome-free/less/fontawesome.less";
+@import "@fortawesome/fontawesome-free/less/solid.less";
+@import "@fortawesome/fontawesome-free/less/brands.less";
+
+/**
+ * Import the typographic grid.
+ */
+@import "@desinax/typographic-grid/less/typography-font-families.less";
+@import "@desinax/typographic-grid/less/typography-defaults.less";
+@import "@desinax/typographic-grid/less/typography-sizes.less";
+@import "@desinax/typographic-grid/less/typography-mixins.less";
+
+// Show the grid
+.hgrid .inner-wrap {
+    @gridImage: "../img/magic-number-@{magicNumber}.png";
+    #desinax-hgrid.showGrid(@gridImage);
+}
+/**
+ * Import the vertical grid.
+ */
+@import "@desinax/vertical-grid/less/grid.less";
+@import "layout/vgrid.less";
+
+
+/**
+* Base style to affect HTML elements on a general scale.
+*/
+
+@import "base/base4.less";
+
+
+/**
+* Layout style for general structure of header, navbar, main, footer
+* and other regions of the page including route specific styles.
+*/
+
+@import "layout/layout4.less";
+
+@import "module/figures3.less";
+
+@import "module/breadcrumb3.less";
+@import "module/stylechooser.less";
+@import "module/flashImg.less";
+@import "module/byline4.less";
+
+//set layout on responsiv
+@import "layout/responsive4.less";
+
+/**
+* A responsive menu.
+*/
+@import "@desinax/responsive-menu/less/responsive-menu.less";
+
+/**
+* My own settings, not currently in their own module.
+*/
+
+@colorText: #333;
+@colorBorder: @colorText;
+@colorBackground: #fff;
+@hborders: #777;
+
+@colorAccent1: lighten(@colorText, 10%);
+@colorAccent2: darken(@colorText, 10%);
+
+@colorContrast: lighten(#637f3c, 20%);
+
+@colorLinks:#0000ff;
+@colorVisited: #800080;
+@colorActive: #ff0000;
+
+#design-mixin.code(lighten(@colorText, 60%), lighten(@colorContrast, 10%));
+
+// Magic number and base fontsize
+//found in body in base3-file
+@magicNumber:  24px;
+@fontSizeBody: 18px;
+
+
+// Default grid, change to fit your requirements.
+@columnWidth:   30;
+@gutterWidth:   10;
+@columns:       24;
+@gridType:      "float"; // "flex"
+
+
+// Set font family to use
+@fontFamilyHeadings: "Ubuntu", sans-serif;
+@fontFamilyBody: "Catamaran", sans-serif;
+@fontFamilyCode: @fontFamilyCourier;

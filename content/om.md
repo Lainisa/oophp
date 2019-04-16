@@ -16,9 +16,6 @@ views:
                 type: single
                 route: block/om-redovisa
 ---
-Om
+Om oophp
 =========================
-
-Lägg till en fin och representativ bild för kursen, enligt ditt eget val.
-
-[FIGURE src=image/meme.jpg?w=740 caption="Guess the number game kmom01..."]
+[FIGURE src=image/meme.jpg?w=400 caption="Story of my life"]

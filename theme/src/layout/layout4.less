@@ -1,0 +1,85 @@
+/**
+ * Layout style for general structure of header, navbar, main, footer
+ * and other regions of the page including route specific styles.
+ */
+
+/**
+ * Variables
+ */
+// När .inner-wrap (tex .inner-wrap-header spänner över 100% av sidans bredd så är dess .row 101% bred och även om .inner-wrap säger max-width: 100% så hjälper det inte då dess inneboende .row { width: 101%}.
+/**
+* General layout
+*/
+.site-logo {
+    display: none;
+}
+
+.row {
+    max-width: 100%;
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+.figure {
+    overflow: auto;
+}
+
+#design-mixin.siteLogo(darken(@colorContrast, 25%), @colorAccent1);
+
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.my-navbar li {
+    margin-top: @magicNumber * 1 / 4;
+}
+
+//sets the drop-down menu list
+.my-navbar li ul {
+    background-color: @colorBackground;
+}
+
+/* for next-previous */
+
+.next-previous .next {
+    text-align: right;
+    width: 50%;
+    float: right;
+}
+
+/* For links */
+a:link {
+    color: @colorLinks;
+}
+
+a:visited{
+    color: @colorVisited;
+}
+
+a:active {
+    color: @colorActive;
+}
+
+.fargschemadiv {
+    & tr {
+        box-shadow: none;
+    }
+}
+
+.rm-button-face-1 {
+    z-index: 1;
+}
+
+.site-footer {
+    text-align: center;
+}
+
+code {
+    font-size: 1em;
+}

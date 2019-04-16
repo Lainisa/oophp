@@ -6,7 +6,7 @@ return [
     // Use for styling the menu
     "wrapper" => null,
     "class" => "my-navbar rm-default rm-desktop",
- 
+
     // Here comes the menu items
     "items" => [
         [

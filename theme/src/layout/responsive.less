@@ -1,0 +1,86 @@
+/**
+ * Layout for responsive style through media queries.
+ */
+
+ @media screen and (max-width: 1500px) {
+     .site-logo {
+         display: none;
+     }
+ }
+
+//smaller things between this and that
+@media screen and (min-width: 680px) and (max-width: 1020px) {
+     div.region-header-col-2 a {
+        padding: 0.4em;
+        font-size: 0.9em;
+    }
+}
+
+//removes hamburger menu
+@media screen and (min-width: 719px) {
+    .rm-small-wrapper {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .rm-small {
+        display: block;
+    }
+    //remove middel menue
+    .rm-desktop {
+        display: none;
+    }
+
+    //sets the byline to 100%
+    div.author-byline {
+        width: 100%;
+    }
+
+    //stack the columns nicely
+    div.footer-column-wrapper {
+        display: inline;
+
+        .footer-column {
+            text-align: center;
+            float: none;
+            margin-left: auto;
+            margin-right: auto;
+            border: none;
+        }
+    }
+    //remove border
+    div.footer-column-wrapper .footer-column:nth-child(2) {
+        border: none;
+    }
+
+    h1 {
+        font-size: 1.2em;
+    }
+
+    .toc a {
+        font-size: 0.8em;
+    }
+
+    .toc ul {
+        padding-left: 0;
+    }
+
+    .toc,
+    .wrap-sidebar > .block,
+    .region-main {
+        word-break: break-word;
+    }
+
+    .region-main {
+        &.has-sidebar-left.has-sidebar-right {
+            width: 50%;
+        }
+    }
+
+    .region-sidebar-right.has-sidebar-right,
+    .region-sidebar-left.has-sidebar-left {
+        width: 25%;
+        float: left;
+    }
+}

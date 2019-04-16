@@ -33,7 +33,6 @@ Here are som routes to try error handling.
 * [500](test/500) throwing a InternalErrorException.
 
 
-
 Routes with a controller
 ------------------------
 
